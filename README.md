@@ -1,5 +1,6 @@
 # generator-mcp [![NPM version][npm-image]][npm-url]
-> 
+
+Yeoman Generator for MCP Server
 
 ## Installation
 

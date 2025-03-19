@@ -1,8 +1,7 @@
 {
   "name": "generator-mcp",
-  "version": "0.1.0",
-  "description": "",
-  "homepage": "",
+  "version": "0.1.1",
+  "description": "Yeoman Generator for MCP Server",
   "author": {
     "name": "Jun Han",
     "email": "formulahendry@gmail.com",
