@@ -1,4 +1,4 @@
-# generator-mcp [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-mcp [![NPM version][npm-image]][npm-url]
 > 
 
 ## Installation
@@ -25,12 +25,8 @@ yo mcp
 
 ## License
 
- © [Jun Han]()
+ © [Jun Han](https://github.com/formulahendry)
 
 
 [npm-image]: https://badge.fury.io/js/generator-mcp.svg
 [npm-url]: https://npmjs.org/package/generator-mcp
-[travis-image]: https://travis-ci.com/formulahendry/generator-mcp.svg?branch=master
-[travis-url]: https://travis-ci.com/formulahendry/generator-mcp
-[daviddm-image]: https://david-dm.org/formulahendry/generator-mcp.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/formulahendry/generator-mcp
