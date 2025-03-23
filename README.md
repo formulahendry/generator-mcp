@@ -1,4 +1,4 @@
-# generator-mcp [![NPM version][npm-image]][npm-url]
+# generator-mcp [![NPM Downloads](https://img.shields.io/npm/d18m/generator-mcp)](https://npmjs.org/package/generator-mcp)
 
 Yeoman Generator for MCP Server
 
@@ -27,7 +27,3 @@ yo mcp
 ## License
 
  © [Jun Han](https://github.com/formulahendry)
-
-
-[npm-image]: https://badge.fury.io/js/generator-mcp.svg
-[npm-url]: https://npmjs.org/package/generator-mcp

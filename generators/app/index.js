@@ -9,7 +9,7 @@ module.exports = class extends Generator {
 
     this.option("mcpServerName", {
       desc: "MCP Server name",
-      alias: "m",
+      alias: "n",
       type: String
     });
     this.option("toolName", {
@@ -62,7 +62,10 @@ module.exports = class extends Generator {
 
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
-      this.props = props;
+      this.props = {};
+      this.props.mcpServerName =
+        this.options.mcpServerName || props.mcpServerName;
+      this.props.toolName = this.options.toolName || props.toolName;
       this.props.mcpServerId = this.props.mcpServerName
         .toLowerCase()
         .replace(/[^a-z0-9]/g, "-");
