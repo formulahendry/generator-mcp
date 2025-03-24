@@ -12,11 +12,6 @@ module.exports = class extends Generator {
       alias: "n",
       type: String
     });
-    this.option("toolName", {
-      desc: "Tool name for the MCP server",
-      alias: "t",
-      type: String
-    });
   }
 
   prompting() {
@@ -41,22 +36,6 @@ module.exports = class extends Generator {
 
           return true;
         }
-      },
-      {
-        type: "input",
-        name: "toolName",
-        message: "What is the tool name for the MCP server?",
-        default: "get_forecast",
-        when: () => {
-          return !this.options.toolName; // Skip the prompt when the value is already passed as a command option
-        },
-        validate: name => {
-          if (!name) {
-            return "Tool name could not be empty";
-          }
-
-          return true;
-        }
       }
     ];
 
@@ -65,7 +44,6 @@ module.exports = class extends Generator {
       this.props = {};
       this.props.mcpServerName =
         this.options.mcpServerName || props.mcpServerName;
-      this.props.toolName = this.options.toolName || props.toolName;
       this.props.mcpServerId = this.props.mcpServerName
         .toLowerCase()
         .replace(/[^a-z0-9]/g, "-");
@@ -73,6 +51,14 @@ module.exports = class extends Generator {
   }
 
   writing() {
+    this.fs.copy(
+      this.templatePath(".vscode", "launch.json"),
+      this.destinationPath(".vscode", "launch.json")
+    );
+    this.fs.copy(
+      this.templatePath(".vscode", "tasks.json"),
+      this.destinationPath(".vscode", "tasks.json")
+    );
     this.fs.copyTpl(
       this.templatePath("src", "index.ts"),
       this.destinationPath("src", "index.ts"),

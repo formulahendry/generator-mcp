@@ -8,21 +8,24 @@ export function createServer(): McpServer {
   });
 
   server.tool(
-    "<%= toolName %>",
-    "description for <%= toolName %>",
+    "get_weather",
+    "Get weather info for a given city.",
     {
-      input: z.string().describe("Input")
+      city: z.string().describe("city name"),
     },
-    async ({ input }) => {
-      if (!input) {
-        throw new Error("Input is required.");
+    async ({ city }) => {
+      if (!city) {
+        throw new Error("city name is required.");
       }
+
+      const response = await fetch(`https://wttr.in/${city}?format=j1`);
+      const weather = await response.json();
 
       return {
         content: [
           {
             type: "text",
-            text: "Tool output",
+            text: JSON.stringify(weather, null, 2),
           },
         ],
       };
