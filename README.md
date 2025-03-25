@@ -1,6 +1,6 @@
 # generator-mcp [![NPM Downloads](https://img.shields.io/npm/d18m/generator-mcp)](https://npmjs.org/package/generator-mcp)
 
-Yeoman Generator for MCP Server
+Yeoman Generator to quickly create a new MCP Server.
 
 ## Installation
 
@@ -11,18 +11,20 @@ npm install -g yo
 npm install -g generator-mcp
 ```
 
-Then generate your new project:
+## Create MCP Server project
+
+Generate your new project:
 
 ```bash
 yo mcp
 ```
 
-## Getting To Know Yeoman
+## Debug/test MCP Server project in VS Code
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+Open project in VS Code, press `F5` to start debugging!
+
+Wait for a while, MCP Inspector will be automatically opened in your default browser.
+
 
 ## License
 
