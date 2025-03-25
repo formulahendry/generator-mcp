@@ -18,8 +18,11 @@ export function createServer(): McpServer {
         throw new Error("city name is required.");
       }
 
-      const response = await fetch(`https://wttr.in/${city}?format=j1`);
-      const weather = await response.json();
+      const weather = {
+        city: city,
+        temperature: Math.floor(Math.random() * 30),
+        condition: "Sunny",
+      };
 
       return {
         content: [
