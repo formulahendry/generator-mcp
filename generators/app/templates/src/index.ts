@@ -5,13 +5,13 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { createServer } from "./server.js";
 
 async function main() {
-    const server: McpServer = createServer();
-    const transport = new StdioServerTransport();
-    await server.connect(transport);
-    console.debug("<%= mcpServerName %> running on stdio");
+  const server: McpServer = createServer();
+  const transport = new StdioServerTransport();
+  await server.connect(transport);
+  console.debug("<%= mcpServerName %> running on stdio");
 }
 
 main().catch((error) => {
-    console.error("Fatal error in main():", error);
-    process.exit(1);
+  console.error("Fatal error in main():", error);
+  process.exit(1);
 });
