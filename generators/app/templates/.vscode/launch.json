@@ -9,6 +9,7 @@
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "runtimeExecutable": "npx",
       "runtimeArgs": [
+        "-y",
         "@modelcontextprotocol/inspector",
         "node",
         "dist/index.js"

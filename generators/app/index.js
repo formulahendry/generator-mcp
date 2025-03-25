@@ -55,6 +55,11 @@ module.exports = class extends Generator {
       this.templatePath(".vscode", "launch.json"),
       this.destinationPath(".vscode", "launch.json")
     );
+    this.fs.copyTpl(
+      this.templatePath(".vscode", "mcp.json"),
+      this.destinationPath(".vscode", "mcp.json"),
+      this.props
+    );
     this.fs.copy(
       this.templatePath(".vscode", "tasks.json"),
       this.destinationPath(".vscode", "tasks.json")
