@@ -25,6 +25,9 @@ Open project in VS Code, press `F5` to start debugging!
 
 Wait for a while, MCP Inspector will be automatically opened in your default browser.
 
+## Tutorial
+
+[Create your own MCP Server from scratch!](https://dev.to/formulahendry/create-your-own-mcp-server-from-scratch-38k6)
 
 ## License
 
