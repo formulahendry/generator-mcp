@@ -74,6 +74,11 @@ module.exports = class extends Generator {
       this.destinationPath("src", "server.ts"),
       this.props
     );
+    this.fs.copyTpl(
+      this.templatePath("src", "streamableHttp.ts"),
+      this.destinationPath("src", "streamableHttp.ts"),
+      this.props
+    );
     this.fs.copy(
       this.templatePath("gitignore"),
       this.destinationPath(".gitignore")
